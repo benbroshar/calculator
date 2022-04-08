@@ -4,7 +4,6 @@ body {
   display:flex;
   align-items: center;
   justify-content: center;
-  background-color: #3399ff;
 }
 
 html,
@@ -41,12 +40,12 @@ button {
 }
 
 .answer-area{
-  height: 80px;
+  height: 90px;
   width: 390px;
   background-color: #828489;
   border:solid black 5px;
   font-family: Roboto, sans-serif;
-  font-size: 50px;
+  font-size: 60px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
