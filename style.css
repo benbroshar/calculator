@@ -52,27 +52,27 @@ button {
 }
 
 .not-number {
-  background-color: #B0E298;
+  background-color: #ff66ff;
 }
 
 #lightup-not-number{
-  background-color: #CAECBB;
+  background-color: #ffb3ff;
 }
 
 .number {
-  background-color: #4D7EA8;
+  background-color: #9900ff;
 }
 
 #lightup-number{
-  background-color: #A8C1D7;
+  background-color: #e0b3ff;
 }
 
 .operator {
-  background-color: #FF8552;
+  background-color: #ff6600;
 }
 
 #lightup-operator{
-  background-color: #FFA480;
+  background-color: #ffd1b3;
 }
 
 .zero{

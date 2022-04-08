@@ -95,7 +95,7 @@ function buttonClick(e){
       operator = Array.from(e.target.classList)[0]
       savedValue = displayValue;
       displayValue = '';
-      appendAnswer(displayValue)
+      //appendAnswer(displayValue)
   };
   };
 };
