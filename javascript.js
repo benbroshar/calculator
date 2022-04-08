@@ -54,6 +54,9 @@ function appendAnswer(value){
 function buttonClick(e){
   const clicked = Array.from(e.target.classList)
   if(clicked[1] == "number"){
+    if(displayValue == undefined){
+      displayValue = "";
+    }
     displayValue += e.target.textContent;
     appendAnswer(displayValue);
   }else if(clicked[1] == "not-number"){
@@ -70,12 +73,27 @@ function buttonClick(e){
     }
   }else if(clicked[1] == "operator"){
     if (clicked[0] == "enter"){
-      displayValue = operate(operator,savedValue,displayValue);
-      savedValue = '';
+      if(operator == ""){
+        return
+      }else if(savedValue == ""){
+        return
+      }else if(displayValue == ""){
+        return
+      }else{
+        displayValue = operate(operator,savedValue,displayValue);
+        if (displayValue == undefined){
+          return
+        } else{
+          savedValue = '';
+          appendAnswer(displayValue)
+        }
 
+      }
     }else{
-      let operator = Array.from(e.target.classList)[0]
+      operator = Array.from(e.target.classList)[0]
       savedValue = displayValue;
+      displayValue = '';
+      appendAnswer(displayValue)
   };
   };
 };
@@ -85,22 +103,31 @@ function buttonClick(e){
 
 
 function add(a,b){
+  a = parseInt(a)
+  b = parseInt(b)
   return a+b;
 };
 
 function subtract(a,b){
+  a = parseInt(a)
+  b = parseInt(b)
   return a-b;
 };
 
 function multiply(a,b){
+  a = parseInt(a)
+  b = parseInt(b)
   return a*b;
 };
 
 function divide(a,b){
   if(b==0){
-    alert('That is impossible. Try another operation.')
+    displayValue = "ERROR"
+    appendAnswer(displayValue)
     return
   }else{
+    a = parseInt(a)
+    b = parseInt(b)
     return (a/b);
   };
 };
@@ -117,6 +144,7 @@ function operate(operator,a,b){
     return c
   }else if(operator == "divide"){
     let c = divide(a,b);
+    c = c.toFixed(10);
     return c
   }
 };
