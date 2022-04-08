@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+button {
+  border:solid black 3px;
+  margin: 5px;
+  width:90px;
+  height:80px;
+  border-radius: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: 530;
+  font-size: 24px;
+}
+
+.calculator-wrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  max-height: 700px;
+  background-color: #272932;
+  border:solid #272932 3px;
+}
+
+.button-area {
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.answer-area{
+  height: 80px;
+  width: 390px;
+  background-color: #828489;
+  border:solid black 5px;
+  font-family: Roboto, sans-serif;
+  font-size: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.not-number {
+  background-color: #B0E298;
+}
+
+#lightup-not-number{
+  background-color: #CAECBB;
+}
+
+.number {
+  background-color: #4D7EA8;
+}
+
+#lightup-number{
+  background-color: #A8C1D7;
+}
+
+.operator {
+  background-color: #FF8552;
+}
+
+#lightup-operator{
+  background-color: #FFA480;
+}
+
+.zero{
+  flex-grow:2;
+}
