@@ -56,6 +56,8 @@ function buttonClick(e){
   if(clicked[1] == "number"){
     if(displayValue == undefined){
       displayValue = "";
+    }else if(displayValue == "ERROR"){
+      displayValue = "";
     }
     displayValue += e.target.textContent;
     appendAnswer(displayValue);
